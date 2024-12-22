@@ -13,14 +13,14 @@ export const getCounterData = async (req, res) => {
     targetDate.setFullYear(targetDate.getFullYear() + 1);
 
     const timeRemaining = targetDate - now;
-    const timePased = now - startDate;
+    const timePassed = now - startDate;
 
     res.status(200).json({
       message: "Counter data",
       startDate,
       targetDate,
       timeRemaining,
-      timePased,
+      timePassed,
     });
   } catch (error) {
     res.status(500).json({ message: "Failed recieve the data" });
